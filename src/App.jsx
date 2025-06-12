@@ -4,7 +4,7 @@ import { MessageCircle, X, Send, User, Code, Smartphone, Globe, Github, Linkedin
 import ProjectSection from './ProjectSection';
 
 import ContactDetails from './ContactDetails';
-import SkillsSection from './skills';
+import SkillsSection from './SkillsSection';
 import AnimatedTitle from './AnimatedTitle';
 
 const Portfolio = () => {

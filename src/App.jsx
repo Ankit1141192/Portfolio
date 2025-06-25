@@ -25,87 +25,87 @@ const Portfolio = () => {
   }, [messages]);
 
   // Simulated AI responses - in real implementation, this would connect to Firebase
- const getAIResponse = (message) => {
-  const lowerMessage = message.toLowerCase();
+  const getAIResponse = (message) => {
+    const lowerMessage = message.toLowerCase();
 
-  // Skills or Technologies
-  if (
-    lowerMessage.includes('what skills do you have') ||
-    lowerMessage.includes('what technologies do you know') ||
-    lowerMessage.includes('what tech stack') ||
-    lowerMessage.includes('tell me your skills') ||
-    lowerMessage.includes('technology') ||
-    lowerMessage.includes('tech') ||
-    lowerMessage.includes('skill')
-  ) {
-    return "Ankit is proficient in React.js, Node.js, JavaScript, HTML5, CSS3, MongoDB, Firebase, UI/UX Design, and Mobile App Development. He's passionate about creating modern web applications and mobile solutions.";
-  }
+    // Skills or Technologies
+    if (
+      lowerMessage.includes('what skills do you have') ||
+      lowerMessage.includes('what technologies do you know') ||
+      lowerMessage.includes('what tech stack') ||
+      lowerMessage.includes('tell me your skills') ||
+      lowerMessage.includes('technology') ||
+      lowerMessage.includes('tech') ||
+      lowerMessage.includes('skill')
+    ) {
+      return "Ankit is proficient in React.js, Node.js, JavaScript, HTML5, CSS3, MongoDB, Firebase, UI/UX Design, and Mobile App Development. He's passionate about creating modern web applications and mobile solutions.";
+    }
 
-  // Experience or Work Background
-  if (
-    lowerMessage.includes('what is your experience') ||
-    lowerMessage.includes('do you have any work experience') ||
-    lowerMessage.includes('tell me about your work') ||
-    lowerMessage.includes('describe your job history') ||
-    lowerMessage.includes('job') ||
-    lowerMessage.includes('experience')
-  ) {
-    return "Ankit is a passionate software developer with expertise in full-stack development. He has worked on various web applications, mobile apps, and UI/UX projects, always focusing on creating user-friendly and responsive designs.";
-  }
+    // Experience or Work Background
+    if (
+      lowerMessage.includes('what is your experience') ||
+      lowerMessage.includes('do you have any work experience') ||
+      lowerMessage.includes('tell me about your work') ||
+      lowerMessage.includes('describe your job history') ||
+      lowerMessage.includes('job') ||
+      lowerMessage.includes('experience')
+    ) {
+      return "Ankit is a passionate software developer with expertise in full-stack development. He has worked on various web applications, mobile apps, and UI/UX projects, always focusing on creating user-friendly and responsive designs.";
+    }
 
-  // Projects or Portfolio
-  if (
-    lowerMessage.includes('show me your projects') ||
-    lowerMessage.includes('what have you built') ||
-    lowerMessage.includes('can i see your portfolio') ||
-    lowerMessage.includes('share your work') ||
-    lowerMessage.includes('project') ||
-    lowerMessage.includes('portfolio')
-  ) {
-    return "Ankit has developed several impressive projects including TodoList Clone, TrafficSub platform, LinkedIn Clone, Storyver storytelling app, Homarex real estate platform, Shopnetic e-commerce app, and StopWatch mobile application. Each project demonstrates his diverse skill set!  ";
-  }
+    // Projects or Portfolio
+    if (
+      lowerMessage.includes('show me your projects') ||
+      lowerMessage.includes('what have you built') ||
+      lowerMessage.includes('can i see your portfolio') ||
+      lowerMessage.includes('share your work') ||
+      lowerMessage.includes('project') ||
+      lowerMessage.includes('portfolio')
+    ) {
+      return "Ankit has developed several impressive projects including TodoList Clone, TrafficSub platform, LinkedIn Clone, Storyver storytelling app, Homarex real estate platform, Shopnetic e-commerce app, and StopWatch mobile application. Each project demonstrates his diverse skill set!  ";
+    }
 
-  // Contact or Hire
-  if (
-    lowerMessage.includes('how can i contact you') ||
-    lowerMessage.includes('can i hire you') ||
-    lowerMessage.includes('how do i reach you') ||
-    lowerMessage.includes('what is your email') ||
-    lowerMessage.includes('contact') ||
-    lowerMessage.includes('hire') ||
-    lowerMessage.includes('email')
-  ) {
-    return "You can reach Ankit through the contact form below, or connect with him on LinkedIn and GitHub. He's always interested in discussing new opportunities and collaborations!";
-  }
+    // Contact or Hire
+    if (
+      lowerMessage.includes('how can i contact you') ||
+      lowerMessage.includes('can i hire you') ||
+      lowerMessage.includes('how do i reach you') ||
+      lowerMessage.includes('what is your email') ||
+      lowerMessage.includes('contact') ||
+      lowerMessage.includes('hire') ||
+      lowerMessage.includes('email')
+    ) {
+      return "You can reach Ankit through the contact form below, or connect with him on LinkedIn and GitHub. He's always interested in discussing new opportunities and collaborations!";
+    }
 
-  // Education Background
-  if (
-    lowerMessage.includes('tell me about your education') ||
-    lowerMessage.includes('what is your study background') ||
-    lowerMessage.includes('where did you study') ||
-    lowerMessage.includes('education') ||
-    lowerMessage.includes('study') ||
-    lowerMessage.includes('background')
-  ) {
-    return "Ankit is dedicated to continuous learning in software development, always staying updated with the latest technologies and best practices in web and mobile development.";
-  }
+    // Education Background
+    if (
+      lowerMessage.includes('tell me about your education') ||
+      lowerMessage.includes('what is your study background') ||
+      lowerMessage.includes('where did you study') ||
+      lowerMessage.includes('education') ||
+      lowerMessage.includes('study') ||
+      lowerMessage.includes('background')
+    ) {
+      return "Ankit is dedicated to continuous learning in software development, always staying updated with the latest technologies and best practices in web and mobile development.";
+    }
 
-  // Greetings
-  if (
-    lowerMessage.includes('hello') ||
-    lowerMessage.includes('hi') ||
-    lowerMessage.includes('hey') ||
-    lowerMessage.includes('good morning') ||
-    lowerMessage.includes('good evening') ||
-    lowerMessage.includes('how are you') ||
-    lowerMessage.includes('what’s up')
-  ) {
-    return "Hello! I'm here to help you learn more about Ankit Kumar. Feel free to ask about his skills, projects, experience, or how to get in touch with him!";
-  }
+    // Greetings
+    if (
+      lowerMessage.includes('hello') ||
+      lowerMessage.includes('hi') ||
+      lowerMessage.includes('hey') ||
+      lowerMessage.includes('good morning') ||
+      lowerMessage.includes('good evening') ||
+      lowerMessage.includes('how are you') ||
+      lowerMessage.includes('what’s up')
+    ) {
+      return "Hello! I'm here to help you learn more about Ankit Kumar. Feel free to ask about his skills, projects, experience, or how to get in touch with him!";
+    }
 
-  // Default fallback
-  return "That's a great question! Ankit is a versatile developer with strong skills in web and mobile development. You can explore his projects below or ask me about his specific skills, experience, or how to contact him.";
-};
+    // Default fallback
+    return "That's a great question! Ankit is a versatile developer with strong skills in web and mobile development. You can explore his projects below or ask me about his specific skills, experience, or how to contact him.";
+  };
 
 
   const handleSendMessage = async () => {
@@ -180,12 +180,12 @@ const Portfolio = () => {
           </h1>
           <h2 className="text-4xl md:text-6xl font-bold mb-8">
             I'm <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Ankit Kumar</span>
-          
+
           </h2>
           <h5 className="text-2xl md:text-2xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            < AnimatedTitle/>
+            < AnimatedTitle />
           </h5>
-          
+
 
           <p className="text-xl md:text-2xl text-gray-500 mb-12 max-w-3xl mx-auto leading-relaxed">
             A passionate software developer who builds modern web apps, websites, and mobile applications
@@ -194,20 +194,20 @@ const Portfolio = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://drive.google.com/file/d/1u12VQo7UlR_64m9-lU0Zc4DbgASlWDQS/view" target="_blank"
-      rel="noopener noreferrer" >
+              rel="noopener noreferrer" >
               <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105">
-              <span className="flex items-center gap-2">
-                <Sparkles className="w-5 h-5" />
-                Resume
-              </span>
-            </button>
+                <span className="flex items-center gap-2">
+                  <Sparkles className="w-5 h-5" />
+                  Resume
+                </span>
+              </button>
             </a>
             <a href="#contact">
               <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full font-medium hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 transform hover:scale-105">
                 Get In Touch
               </button>
             </a>
-           
+
           </div>
         </div>
       </section>
@@ -274,90 +274,89 @@ const Portfolio = () => {
 
       {/* Chatbot */}
       <div className="fixed bottom-6 right-6 z-50">
-  {isChatOpen && (
-    <div className="mb-4 w-[75vw] max-w-md h-[50vh] sm:w-96 sm:h-96 bg-black/90 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl shadow-purple-500/20 flex flex-col">
-      {/* Chat Header */}
-      <div className="p-4 border-b border-white/20 flex justify-between items-center bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-t-2xl">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center">
-            <Zap className="w-4 h-4 text-white" />
-          </div>
-          <div>
-            <h3 className="font-semibold">AI Assistant</h3>
-            <p className="text-xs text-gray-400">Ask about Ankit</p>
-          </div>
-        </div>
-        <button
-          onClick={() => setIsChatOpen(false)}
-          className="text-gray-400 hover:text-white transition-colors duration-300"
-        >
-          <X className="w-5 h-5" />
-        </button>
-      </div>
-
-      {/* Chat Messages */}
-      <div className="flex-1 p-4 overflow-y-auto space-y-4">
-        {messages.map((message, index) => (
-          <div key={index} className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}>
-            <div
-              className={`max-w-[80%] p-3 rounded-2xl ${
-                message.isBot
-                  ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-white'
-                  : 'bg-white/10 text-white'
-              }`}
-            >
-              <p className="text-sm">{message.text}</p>
+        {isChatOpen && (
+          <div className="mb-4 w-[75vw] max-w-md h-[50vh] sm:w-96 sm:h-96 bg-black/90 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl shadow-purple-500/20 flex flex-col">
+            {/* Chat Header */}
+            <div className="p-4 border-b border-white/20 flex justify-between items-center bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-t-2xl">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center">
+                  <Zap className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold">AI Assistant</h3>
+                  <p className="text-xs text-gray-400">Ask about Ankit</p>
+                </div>
+              </div>
+              <button
+                onClick={() => setIsChatOpen(false)}
+                className="text-gray-400 hover:text-white transition-colors duration-300"
+              >
+                <X className="w-5 h-5" />
+              </button>
             </div>
-          </div>
-        ))}
-        {isTyping && (
-          <div className="flex justify-start">
-            <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 p-3 rounded-2xl">
-              <div className="flex gap-1">
-                <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
-                <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce animation-delay-200"></div>
-                <div className="w-2 h-2 bg-pink-400 rounded-full animate-bounce animation-delay-400"></div>
+
+            {/* Chat Messages */}
+            <div className="flex-1 p-4 overflow-y-auto space-y-4">
+              {messages.map((message, index) => (
+                <div key={index} className={`flex ${message.isBot ? 'justify-start' : 'justify-end'}`}>
+                  <div
+                    className={`max-w-[80%] p-3 rounded-2xl ${message.isBot
+                        ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-white'
+                        : 'bg-white/10 text-white'
+                      }`}
+                  >
+                    <p className="text-sm">{message.text}</p>
+                  </div>
+                </div>
+              ))}
+              {isTyping && (
+                <div className="flex justify-start">
+                  <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 p-3 rounded-2xl">
+                    <div className="flex gap-1">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce animation-delay-200"></div>
+                      <div className="w-2 h-2 bg-pink-400 rounded-full animate-bounce animation-delay-400"></div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              <div ref={messagesEndRef} />
+            </div>
+
+            {/* Chat Input */}
+            <div className="p-4 border-t border-white/20">
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  value={inputMessage}
+                  onChange={(e) => setInputMessage(e.target.value)}
+                  onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+                  placeholder="Ask about Ankit's skills..."
+                  className="flex-1 p-3 bg-white/10 border border-white/20 rounded-xl focus:border-cyan-400 focus:outline-none text-white placeholder-gray-400 text-sm"
+                />
+                <button
+                  onClick={handleSendMessage}
+                  className="p-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105"
+                >
+                  <Send className="w-4 h-4 text-white" />
+                </button>
               </div>
             </div>
           </div>
         )}
-        <div ref={messagesEndRef} />
-      </div>
 
-      {/* Chat Input */}
-      <div className="p-4 border-t border-white/20">
-        <div className="flex gap-2">
-          <input
-            type="text"
-            value={inputMessage}
-            onChange={(e) => setInputMessage(e.target.value)}
-            onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-            placeholder="Ask about Ankit's skills..."
-            className="flex-1 p-3 bg-white/10 border border-white/20 rounded-xl focus:border-cyan-400 focus:outline-none text-white placeholder-gray-400 text-sm"
-          />
-          <button
-            onClick={handleSendMessage}
-            className="p-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105"
-          >
-            <Send className="w-4 h-4 text-white" />
-          </button>
-        </div>
+        {/* Chat Toggle Button */}
+        <button
+          onClick={() => setIsChatOpen(!isChatOpen)}
+          className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/30 transition-all duration-300 transform hover:scale-110"
+        >
+          {isChatOpen ? (
+            <X className="w-6 h-6 text-white" />
+          ) : (
+            <MessageCircle className="w-6 h-6 text-white" />
+          )}
+        </button>
       </div>
-    </div>
-  )}
-
-  {/* Chat Toggle Button */}
-  <button
-    onClick={() => setIsChatOpen(!isChatOpen)}
-    className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/30 transition-all duration-300 transform hover:scale-110"
-  >
-    {isChatOpen ? (
-      <X className="w-6 h-6 text-white" />
-    ) : (
-      <MessageCircle className="w-6 h-6 text-white" />
-    )}
-  </button>
-</div>
 
     </div>
   );

@@ -30,7 +30,7 @@ const ContactDetails = () => {
   };
 
   return (
-     <section id="contact" className="relative z-10 py-20 px-6 bg-white">
+    <section id="contact" className="relative z-10 py-20 px-6 bg-white">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -78,9 +78,21 @@ const ContactDetails = () => {
               <a href="https://github.com/Ankit1141192" target="_blank" rel="noopener noreferrer">
                 <img src={GitHub} alt="GitHub" className="w-6 h-6" />
               </a>
-              <a href="mailto:ankit2914978@gmail.com">
-                <img src={EmailIcon} alt="Email" className="w-6 h-6" />
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=ankit2914978@gmail.com&su=Let%27s%20Connect&body=Hi%20Ankit%2C%0D%0A%0D%0AI%20saw%20your%20portfolio%20and%20would%20like%20to%20connect%20regarding%20a%20project%20opportunity."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Send Email"
+                className="hover:scale-110 transition-transform duration-300"
+              >
+                <img src={EmailIcon} alt="Email Icon" className="w-6 h-6" />
               </a>
+
+
+
+
+
+
             </div>
           </div>
 

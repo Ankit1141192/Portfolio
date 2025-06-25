@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import { Github, ExternalLink } from "lucide-react";
 
-import Portfolio1 from "../src/assets/todoist.png";
-import Portfolio2 from "../src/assets/trafficIssue.png";
-import Portfolio3 from "../src/assets/Homorax.png";
-import Portfolio4 from "../src/assets/LinkedinClone.png";
-import Portfolio5 from "../src/assets/Shopnetic.jpeg";
-import Portfolio6 from "../src/assets/portfolio-7.png";
-import Portfolio7 from "../src/assets/StopWatch2.jpg";
+import Project_1 from "../src/assets/todoist.png";
+import Project_2 from "../src/assets/trafficIssue.png";
+import Project_3 from "../src/assets/Homorax.png";
+import Project_4 from "../src/assets/LinkedinClone.png";
+import Project_5 from "../src/assets/Shopnetic.jpeg";
+import Project_6 from "../src/assets/portfolio-7.png";
+import Project_7 from "../src/assets/StopWatch2.jpg";
+import Project_8 from "../src/assets/ChargeGrid.jpg"
 
 const projects = [
   {
     title: "Todoist Clone",
     description: "A productivity app to manage your tasks efficiently.",
     tech: ["HTML", "CSS", "JavaScript", "LocalStorage"],
-    image: Portfolio1,
+    image: Project_1,
     github: "https://github.com/Ankit1141192/todoistConstructWeak",
     deploy: "https://bright-cendol-1e0307.netlify.app",
     category: "web"
@@ -23,7 +24,7 @@ const projects = [
     title: "TraffIssue",
     description: "A platform for citizens to report traffic problems.",
     tech: ["HTML", "CSS", "JavaScript", "LocalStorage"],
-    image: Portfolio2,
+    image: Project_2,
     github: "https://github.com/Sadafff19/Team_4347_hackathon",
     deploy: "https://4347-hackthon.netlify.app",
     category: "web"
@@ -32,7 +33,7 @@ const projects = [
     title: "LinkedIn Clone",
     description: "A social networking app inspired by LinkedIn.",
     tech: ["HTML", "JavaScript", "CSS", "LocalStorage"],
-    image: Portfolio4,
+    image: Project_4,
     github: "https://github.com/Ankit1141192/cunstructWeakProject",
     category: "web"
   },
@@ -40,7 +41,7 @@ const projects = [
     title: "Stayver",
     description: "A hotel booking platform with a user-friendly interface.",
     tech: ["React+Vite", "TailwindCSS", "ClerkAuth"],
-    image: Portfolio6,
+    image: Project_6,
     github: "https://github.com/Ankit1141192/QuickStay",
     deploy: "https://stayver.vercel.app/",
     category: "web"
@@ -49,7 +50,7 @@ const projects = [
     title: "Homorax",
     description: "An ecommerce platform for modern shopping experiences.",
     tech: ["React", "CSS", "ChakraUI", "Firebase Authentication"],
-    image: Portfolio3,
+    image: Project_3,
     github: "https://github.com/Ankit1141192/The-Coding-Crusaders",
     category: "web"
   },
@@ -57,7 +58,7 @@ const projects = [
     title: "Shopnetic",
     description: "A mobile-friendly online store with advanced features.",
     tech: ["React Native", "JavaScript", "Expo", "FirebaseAuth", "AsyncStorage"],
-    image: Portfolio5,
+    image: Project_5,
     github: "https://github.com/Ankit1141192/ReactNativeProject",
     category: "mobile"
   },
@@ -65,9 +66,18 @@ const projects = [
     title: "StopWatch",
     description: "A simple stopwatch app built with React Native",
     tech: ["React Native", "JavaScript", "Expo", "AsyncStorage"],
-    image: Portfolio7,
+    image: Project_7,
     github: "https://github.com/Ankit1141192/StopWatch-Timer-App",
     category: "mobile"
+  }
+  ,{
+    title:"ChargeGrid",
+    description:"ChargeGrid is a React Native CLI mobile application built to help electric vehicle (EV) and find distance between two point",
+    tech:["React Native","JavaScript","AsyncStorage","CLI","Map"],
+    image: Project_8,
+    github:"https://github.com/Ankit1141192/ChargeGrid",
+    category:"mobile"
+
   }
 ];
 

@@ -10,7 +10,7 @@ import { SiFirebase } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 
 const skills = [
-  { name: "React.js", level: 90, icon: <FaReact size={24} color="#61DBFB" /> },
+  { name: "React.js", level: 86, icon: <FaReact size={24} color="#61DBFB" /> },
   { name: "JavaScript", level: 88, icon: <FaJs size={24} color="#F7DF1E" /> },
   {
     name: "React Native",

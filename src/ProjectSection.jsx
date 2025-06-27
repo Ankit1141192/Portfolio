@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Github, ExternalLink } from "lucide-react";
 
 import Project_1 from "../src/assets/todoist.png";
@@ -8,7 +8,7 @@ import Project_4 from "../src/assets/LinkedinClone.png";
 import Project_5 from "../src/assets/Shopnetic.jpeg";
 import Project_6 from "../src/assets/portfolio-7.png";
 import Project_7 from "../src/assets/StopWatch2.jpg";
-import Project_8 from "../src/assets/ChargeGrid.jpg"
+import Project_8 from "../src/assets/ChargeGrid.jpg";
 
 const projects = [
   {
@@ -18,7 +18,7 @@ const projects = [
     image: Project_1,
     github: "https://github.com/Ankit1141192/todoistConstructWeak",
     deploy: "https://bright-cendol-1e0307.netlify.app",
-    category: "web"
+    category: "web",
   },
   {
     title: "TraffIssue",
@@ -27,7 +27,7 @@ const projects = [
     image: Project_2,
     github: "https://github.com/Sadafff19/Team_4347_hackathon",
     deploy: "https://4347-hackthon.netlify.app",
-    category: "web"
+    category: "web",
   },
   {
     title: "LinkedIn Clone",
@@ -35,7 +35,7 @@ const projects = [
     tech: ["HTML", "JavaScript", "CSS", "LocalStorage"],
     image: Project_4,
     github: "https://github.com/Ankit1141192/cunstructWeakProject",
-    category: "web"
+    category: "web",
   },
   {
     title: "Stayver",
@@ -44,7 +44,7 @@ const projects = [
     image: Project_6,
     github: "https://github.com/Ankit1141192/QuickStay",
     deploy: "https://stayver.vercel.app/",
-    category: "web"
+    category: "web",
   },
   {
     title: "Homorax",
@@ -52,7 +52,7 @@ const projects = [
     tech: ["React", "CSS", "ChakraUI", "Firebase Authentication"],
     image: Project_3,
     github: "https://github.com/Ankit1141192/The-Coding-Crusaders",
-    category: "web"
+    category: "web",
   },
   {
     title: "Shopnetic",
@@ -60,37 +60,44 @@ const projects = [
     tech: ["React Native", "JavaScript", "Expo", "FirebaseAuth", "AsyncStorage"],
     image: Project_5,
     github: "https://github.com/Ankit1141192/ReactNativeProject",
-    category: "mobile"
+    category: "mobile",
   },
   {
     title: "StopWatch",
-    description: "A simple stopwatch app built with React Native",
+    description: "A simple stopwatch app built with React Native.",
     tech: ["React Native", "JavaScript", "Expo", "AsyncStorage"],
     image: Project_7,
     github: "https://github.com/Ankit1141192/StopWatch-Timer-App",
-    category: "mobile"
-  }
-  ,{
-    title:"ChargeGrid",
-    description:"ChargeGrid is a React Native CLI mobile application built to help electric vehicle (EV) and find distance between two point",
-    tech:["React Native","JavaScript","AsyncStorage","CLI","Map"],
+    category: "mobile",
+  },
+  {
+    title: "ChargeGrid",
+    description:
+      "ChargeGrid is a React Native CLI mobile application built to help electric vehicle (EV) and find distance between two point",
+    tech: ["React Native", "JavaScript", "AsyncStorage", "CLI", "Map"],
     image: Project_8,
-    github:"https://github.com/Ankit1141192/ChargeGrid",
-    category:"mobile"
-
-  }
+    github: "https://github.com/Ankit1141192/ChargeGrid",
+    category: "mobile",
+  },
 ];
 
 const ProjectSection = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const sectionRef = useRef(null);
 
   const filteredProjects =
     selectedCategory === "all"
       ? projects
-      : projects.filter(project => project.category === selectedCategory);
+      : projects.filter((project) => project.category === selectedCategory);
+
+  useEffect(() => {
+    if (sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [selectedCategory]);
 
   return (
-     <section id="projects" className="relative z-10 py-20 px-6">
+    <section id="projects" ref={sectionRef} className="relative z-10 py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -103,7 +110,7 @@ const ProjectSection = () => {
 
         <div className="flex justify-center mb-12">
           <div className="bg-white border border-gray-400 p-2 rounded-2xl">
-            {["all", "web", "mobile"].map(category => (
+            {["all", "web", "mobile"].map((category) => (
               <button
                 key={category}
                 className={`px-6 py-3 rounded-xl font-medium mr-2 transition-colors duration-300 ${

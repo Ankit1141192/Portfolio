@@ -1,14 +1,17 @@
 import React from "react";
 import { Sparkles } from "lucide-react";
-import mypic from "../src/assets/Ankitpic1.png" // 🔁 Make sure the image path is correct
+import mypic from "../src/assets/Ankitpic1.png";
 
 function HeroSection() {
   return (
-    <section id="home" className="relative z-10 min-h-screen flex items-center justify-center px-6 bg-white">
+    <section
+      id="home"
+      className="relative z-10 min-h-screen flex items-center justify-center px-6 bg-white"
+    >
       <div className="text-center max-w-4xl mx-auto">
         {/* Profile Image */}
         <div className="mb-8">
-          <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 p-1 mb-8 animate-pulse">
+          <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 p-1 mb-8">
             <img
               src={mypic}
               alt="Ankit Kumar"
@@ -18,17 +21,20 @@ function HeroSection() {
         </div>
 
         {/* Main Headings */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
+        <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
           Hello,
         </h1>
         <h2 className="text-3xl md:text-5xl font-bold mb-6">
-          I'm <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Ankit Kumar</span>
+          I'm{" "}
+          <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            Ankit Kumar
+          </span>
         </h2>
 
         {/* Description */}
         <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-          A passionate software developer who builds modern web apps, websites, and mobile applications
-          that are fast, responsive, and user-friendly.
+          A passionate software developer who builds modern web apps, websites,
+          and mobile applications that are fast, responsive, and user-friendly.
         </p>
 
         {/* Buttons */}

@@ -6,6 +6,7 @@ import ProjectSection from './ProjectSection';
 import ContactDetails from './ContactDetails';
 import SkillsSection from './SkillsSection';
 import AnimatedTitle from './AnimatedTitle';
+import HeroSection from './HeroSection';
 
 const Portfolio = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -163,59 +164,11 @@ const Portfolio = () => {
 
 
       {/* Hero Section */}
-      <section id="home" className="relative z-10 min-h-screen flex items-center justify-center px-6 pt-30">
-        <div className="text-center max-w-4xl mx-auto">
-          <div className="mb-8">
-            <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 p-1 mb-8 animate-pulse">
-              <img
-                src={mypic}
-                alt="Ankit Kumar"
-                className="w-full h-full rounded-full object-cover"
-              />
-            </div>
-          </div>
-
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-            Hello,
-          </h1>
-          <h2 className="text-4xl md:text-6xl font-bold mb-8">
-            I'm <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Ankit Kumar</span>
-
-          </h2>
-          <h5 className="text-2xl md:text-2xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            < AnimatedTitle />
-          </h5>
-
-
-          <p className="text-xl md:text-2xl text-gray-500 mb-12 max-w-3xl mx-auto leading-relaxed">
-            A passionate software developer who builds modern web apps, websites, and mobile applications
-            that are fast, responsive, and user-friendly.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://drive.google.com/file/d/1u12VQo7UlR_64m9-lU0Zc4DbgASlWDQS/view" target="_blank"
-              rel="noopener noreferrer" >
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105">
-                <span className="flex items-center gap-2">
-                  <Sparkles className="w-5 h-5" />
-                  Resume
-                </span>
-              </button>
-            </a>
-            <a href="#contact">
-              <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full font-medium hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 transform hover:scale-105">
-                Get In Touch
-              </button>
-            </a>
-
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="relative z-10 py-20 px-6">
+      <HeroSection/>
+     
+      <section id="about" className="relative z-10 py-20 px-6 ">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               About Me
             </h2>

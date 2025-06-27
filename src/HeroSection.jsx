@@ -1,12 +1,13 @@
 import React from "react";
 import { Sparkles } from "lucide-react";
 import mypic from "../src/assets/Ankitpic1.png";
+import AnimatedTitle from "./AnimatedTitle";
 
 function HeroSection() {
   return (
     <section
       id="home"
-      className="relative z-10 min-h-screen flex items-center justify-center px-6 bg-white"
+      className="relative z-10 min-h-screen flex items-center justify-center px-6 bg-white mt-5"
     >
       <div className="text-center max-w-4xl mx-auto">
         {/* Profile Image */}
@@ -21,15 +22,20 @@ function HeroSection() {
         </div>
 
         {/* Main Headings */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
           Hello,
         </h1>
-        <h2 className="text-3xl md:text-5xl font-bold mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">
           I'm{" "}
           <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Ankit Kumar
           </span>
+          
         </h2>
+        <h2 className=" text-1xl md:text-2xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+          <AnimatedTitle/>
+        </h2>
+        
 
         {/* Description */}
         <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">

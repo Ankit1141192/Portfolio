@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Github, ExternalLink } from "lucide-react";
-
 import Project_1 from "../src/assets/todoist.png";
 import Project_2 from "../src/assets/trafficIssue.png";
 import Project_3 from "../src/assets/Homorax.png";
@@ -81,9 +80,11 @@ const projects = [
   },
 ];
 
+
 const ProjectSection = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const sectionRef = useRef(null);
+  const hasMounted = useRef(false); // ✅ This prevents auto-scroll on first render
 
   const filteredProjects =
     selectedCategory === "all"
@@ -91,13 +92,15 @@ const ProjectSection = () => {
       : projects.filter((project) => project.category === selectedCategory);
 
   useEffect(() => {
-    if (sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (hasMounted.current) {
+      sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      hasMounted.current = true;
     }
   }, [selectedCategory]);
 
   return (
-    <section id="projects" ref={sectionRef} className="relative z-10 py-20 px-6">
+    <section id="projects" ref={sectionRef} className="relative z-10 py-20 px-6 pt-24">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -108,6 +111,7 @@ const ProjectSection = () => {
           </p>
         </div>
 
+        {/* Category filter buttons */}
         <div className="flex justify-center mb-12">
           <div className="bg-white border border-gray-400 p-2 rounded-2xl">
             {["all", "web", "mobile"].map((category) => (
@@ -130,6 +134,7 @@ const ProjectSection = () => {
           </div>
         </div>
 
+        {/* Project cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
             <div
